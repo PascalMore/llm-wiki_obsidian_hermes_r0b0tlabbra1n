@@ -28,6 +28,9 @@ Thumbs.db
 /vault/
 /raw/
 
+# Logs (auto-push run logs, no audit value)
+/logs/
+
 # SQLite databases
 *.sqlite
 *.db
