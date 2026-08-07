@@ -19,7 +19,11 @@ VAULT_DIRS = [
     "_agent/heartbeat",
     "_agent/audits",
     "projects",
-    "sessions/summaries",
+    # Canonical raw capture location for session summaries lives under
+    # `raw/sessions/` (see r0b0tlabbra1n.ingest.hermes_sessions). The legacy
+    # `sessions/summaries/` directory is intentionally NOT pre-created by
+    # `brain init`; existing legacy files remain readable through
+    # `memory.promote._LEGACY_GLOBS` for backward compatibility.
     "entities",
     "concepts",
     "comparisons",

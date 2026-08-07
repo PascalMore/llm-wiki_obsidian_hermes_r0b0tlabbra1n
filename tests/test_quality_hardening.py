@@ -121,6 +121,6 @@ def test_ingest_is_schema_tolerant_and_writes_structured_summary(tmp_path: Path)
         ["ingest-sessions", "--hermes-home", str(tmp_path), "--vault", str(vault)],
     )
     assert result.exit_code == 0
-    summary = next((vault / "sessions" / "summaries").glob("*.md")).read_text(encoding="utf-8")
+    summary = next((vault / "raw" / "sessions").glob("*.md")).read_text(encoding="utf-8")
     assert "## User Requests" in summary
     assert "## Decisions" in summary
