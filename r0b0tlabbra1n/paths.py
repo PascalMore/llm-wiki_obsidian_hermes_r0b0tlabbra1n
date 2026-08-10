@@ -3,13 +3,20 @@
 from pathlib import Path
 
 # Standard vault subdirectories
+#
+# Raw taxonomy (V2, post-2026-08-10 JMap raw revision): the six canonical
+# first-level raw roots are `documents`, `datasets`, `web`, `media`,
+# `sessions`, and `skills`. The V1 genre roots (`articles`, `papers`,
+# `projects`, `assets`) are retired and MUST NOT be recreated by `brain init`;
+# their contents are reachable via `source_kind` sidecar metadata. See
+# JMAP_ARCHITECTURE.md / SCHEMA.md (`source_kind` replaces genre roots).
 VAULT_DIRS = [
-    "raw/articles",
-    "raw/papers",
+    "raw/documents",
+    "raw/datasets",
+    "raw/web",
+    "raw/media",
     "raw/sessions",
-    "raw/projects",
     "raw/skills",
-    "raw/assets",
     "dashboards",
     "_agent/semantic",
     "_agent/episodic/decisions",

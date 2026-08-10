@@ -253,12 +253,11 @@ _SCHEMA_BODY = """\
 - `_agent/` — agent instructions, operating rules, semantic/episodic memory
 - `dashboards/` — auto-generated dashboards (health, stale items, open questions)
 - `projects/` — per-project pages with overview, status, decisions, pitfalls
-- `sessions/` — session summaries, transcript index, lineage
 - `entities/` — people, organizations, projects, tools
 - `concepts/` — technical concepts, mental models, comparisons
 - `procedures/` — workflows, playbooks, how-tos
 - `skills/` — Hermes skill catalog and improvement candidates
-- `raw/` — immutable source captures (articles, papers, sessions)
+- `raw/` — immutable source captures (`documents`, `datasets`, `web`, `media`, `sessions`, `skills`); the V1 genre roots (`articles`, `papers`, `projects`, `assets`) are retired
 - `_meta/` — indexes, manifests, hashes, config
 
 ## Page Types
@@ -297,7 +296,7 @@ This index is rebuilt by `brain build-index`. Last rebuild: pending.
 
 - Dashboards: see [[dashboards/]]
 - Projects: see [[projects/]]
-- Sessions: see [[sessions/]]
+- Sessions: see [[raw/sessions/]]
 - Entities: see [[entities/]]
 - Concepts: see [[concepts/]]
 - Procedures: see [[procedures/]]
@@ -305,7 +304,7 @@ This index is rebuilt by `brain build-index`. Last rebuild: pending.
 ## By Tier
 
 - L2 WARM: [[dashboards/agent-dashboard]], [[_agent/START_HERE]], [[_agent/operating-rules]]
-- L3 COLD: [[projects/]], [[sessions/summaries/]], [[concepts/]]
+- L3 COLD: [[projects/]], [[raw/sessions/]], [[concepts/]]
 """
 
 _LOG_BODY = """\
